@@ -38,14 +38,6 @@ gm['Volume'].plot(label='GM')
 ford['Volume'].plot(label='Ford')
 plt.legend()
 
-# What was the date of the Mximum trading volume for Ford?
-# What happened that day?
-
-ford['Volume'].argmax()
-
-# Create a new column for each dataframe called "Total Traded" which is the
-# Open Price multiplied by the Volume Traded.
-
 tesla['Total Traded'] = tesla['Open'] * tesla['Volume']
 ford['Total Traded'] = ford['Open'] * ford['Volume']
 gm['Total Traded'] = gm['Open'] * gm['Volume']
@@ -57,7 +49,7 @@ plt.legend()
 
 tesla['Total Traded'].argmax()
 
-# Plot out some MA (Moving Average).
+# Plot out MA (Moving Average).
 # Plot out the MA50 and MA200 for GM
 
 gm['MA50'] = gm['Open'].rolling(50).mean()
